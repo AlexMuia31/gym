@@ -1,0 +1,159 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stay Fit</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}" />
+
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+	<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+	
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<header id="header">
+			<div class="center">
+				<div class="logo"><a href="/"><img src="{% static 'img/logo.png' %}" alt="logo"></a></div>
+				<div class="search_btn"><img src="{% static 'img/search.svg' %}" alt="Search Button"></div>
+				<div class="menu_btn"><img src="{% static 'img/bars.svg' %}" alt="Menu Button"></div>
+				<form class="main_search" action="#" method="GET">
+					<input type="text" name="s" placeholder="Search...">
+					<input type="submit" value="Search">
+				</form>
+				<nav class="main_menu">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="{% url 'core:about' %}">About Us</a></li>
+						<li><a href="/blog">Blog</a></li>
+						
+						<li><a href="{% url 'core:contact' %}">Contact</a></li>
+						
+					</ul>
+				</nav>
+				
+			</div>
+        </header>
+        {% block content %}
+
+        {% endblock %}
+
+		<footer id="footer">
+			<div class="center">
+				<div class="footer_section about">
+					<a href="#"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+					<p>Lorem ipsum dolor sit amet, ei ubique fastidii vim. Elitr feugait complectitur eu pro, sea audire ponderum eleifend cu. Vim at fuisset.</p>
+
+					<ul>
+						<li><i class="fas fa-map-marker-alt"></i>23 New street, New York</li>
+						<li><i class="fas fa-envelope"></i>lorem@ipsum.com</li>
+						<li><i class="fas fa-mobile"></i>+440-123-456-7890</li>
+					</ul>
+				</div>
+
+				<div class="footer_section newsletter">
+					
+					<ul>
+						<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+						<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="footer_section latest_posts">
+					<h1>Latest Posts</h1>
+					<ul>
+						<li>
+							<a href="page.html"><img src="img/img1.jpg"></a>
+							<a href="page.html"><h3>Lorem ipsum dolor sit amet, ei ubique fastidii vim</h3></a>
+						</li>
+						<li>
+							<a href="#"><img src="img/img2.jpg"></a>
+							<a href="page.html"><h3>Elitr feugait complectitur eu pro, sea audire</h3></a>
+						</li>
+						<li>
+							<a href="#"><img src="img/img3.jpg"></a>
+							<a href="page.html"><h3>Lorem ipsum dolor sit amet, ei ubique fastidii vim</h3></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer_section opening_hours">
+					<h1>Opening Hours</h1>
+					<ul>
+						<li><h3>Monday</h3><span>08:00 AM - 18:00 PM</span></li>
+						<li><h3>Tuesday</h3><span>08:00 AM - 18:00 PM</span></li>
+						<li><h3>Wednesday</h3><span>08:00 AM - 18:00 PM</span></li>
+						<li><h3>Thursday</h3><span>08:00 AM - 18:00 PM</span></li>
+						<li><h3>Friday</h3><span>08:00 AM - 18:00 PM</span></li>
+						<li><h3>Saturday</h3><span>08:00 AM - 18:00 PM</span></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			
+
+			<div class="copyright"><div class="center"><p>&copy 2018 stayfit</p></div></div>
+		</footer>
+
+	</div>
+	<script src="{% static 'js/swiper.min.js' %}"></script>
+	<script>
+		var swiper = new Swiper('.home_slider .swiper-container', {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+			}
+		});
+
+		var swiper = new Swiper('.workout .swiper-container', {
+			slidesPerView: 3,
+			spaceBetween: 0,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				640: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				}
+			}
+		});
+
+		var swiper = new Swiper('.instagram_photos .swiper-container', {
+			slidesPerView: 5,
+			spaceBetween: 0,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+				},
+				320: {
+					slidesPerView: 1,
+				}
+			}
+		});
+	</script>
+</body>
+</html>

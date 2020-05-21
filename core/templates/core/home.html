@@ -1,0 +1,170 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+		<section class="content">
+			<div class="home_slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="{% static 'img/cover1.png' %}"></div>
+						<div class="swiper-slide"><img src="{% static 'img/cover2.png' %}"></div>
+						<div class="swiper-slide"><img src="{% static 'img/cover3.png' %}"></div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			<div class="center">
+				<div class="features">
+					<div class="feature">
+						<div class="feature_details">
+							<img src="{% static 'img/img1.jpg'%}">
+							<h3>Bodybuilding</h3>
+							<p>Lorem ipsum dolor sit amet, ei veritus consetetur repudiandae eam, duo ne homero nostro moderatius.</p>
+						</div>
+					</div>
+					<div class="feature">
+						<div class="feature_details">
+							<img src="{% static 'img/img2.jpg' %}">
+							<h3>Fitness</h3>
+							<p>Lorem ipsum dolor sit amet, ei veritus consetetur repudiandae eam, duo ne homero nostro moderatius.</p>
+						</div>
+					</div>
+					<div class="feature">
+						<div class="feature_details">
+							<img src="{% static 'img/img3.jpg' %}">
+							<h3>Wight Lifting</h3>
+							<p>Lorem ipsum dolor sit amet, ei veritus consetetur repudiandae eam, duo ne homero nostro moderatius.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center">
+				<div class="join">
+					<div class="join_left"><img src="img/img4.jpg"></div>
+					<div class="join_right">
+						<h1>Joined Today Get The Best</h1>
+						<h2>MEMBERSHIP OFFER OF THE YEAR</h2>
+						<p>Decore quidam bonorum vis eu, omnium instructior disputationi pro ei. An decore omittam duo, sed noluisse petentium instructior ad, pro no vidit error maiestatis. Ut qui errem quidam feugiat, ea eum vero mutat aliquip, ne erat postulant argumentum vim. Aliquip</p>
+						<a href="contact.html"><button>SIGN UP</button></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="workout">
+				<h1>Workout Classes</h1>
+				<h2>Physical Activity Or Exercise Can Improve Your Health</h2>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/img1.jpg">
+							<div class="workout_details">
+								<a href="page.html"><img src="{% static 'img/search.svg' %}" alt="Search Button"></a>
+								<a href="page.html"><h3>Muscle Building</h3></a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/img2.jpg">
+							<div class="workout_details">
+								<a href="page.html"><img src="{% static 'img/search.svg' %}" alt="Search Button"></a>
+								<a href="page.html"><h3>Boxing</h3></a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/img3.jpg">
+							<div class="workout_details">
+								<a href="page.html"><img src="{% static 'img/search.svg' %}" alt="Search Button"></a>
+								<a href="page.html"><h3>Fitness</h3></a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/img1.jpg">
+							<div class="workout_details">
+								<a href="page.html"><img src="img/search.svg" alt="Search Button"></a>
+								<a href="page.html"><h3>Muscle Building</h3></a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/img2.jpg">
+							<div class="workout_details">
+								<a href="page.html"><img src="img/search.svg" alt="Search Button"></a>
+								<a href="page.html"><h3>Boxing</h3></a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/img3.jpg">
+							<div class="workout_details">
+								<a href="page.html"><img src="img/search.svg" alt="Search Button"></a>
+								<a href="page.html"><h3>Fitness</h3></a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+
+			<div class="center">
+				<div class="price_table">
+					<div class="price">
+						<div class="price_header quaterly">
+							<h1>Quaterly</h1>
+							<h2>$90</h2>
+							<span>Per month</span>
+						</div>
+						<ul class="price_content">
+							<li>3 Days of the week</li>
+							<li>Personal Trainer</li>
+							<li>Body building</li>
+							<li>Cross Fit</li>
+							<li>Fitness</li>
+							<li>Boxing</li>
+						</ul>
+						<a href="contact.html"><button>Buy Now</button></a>
+					</div>
+
+					<div class="price">
+						<div class="price_header halfyear">
+							<h1>Half Year</h1>
+							<h2>$80</h2>
+							<span>Per month</span>
+						</div>
+						<ul class="price_content">
+							<li>3 Days of the week</li>
+							<li>Personal Trainer</li>
+							<li>Body building</li>
+							<li>Cross Fit</li>
+							<li>Fitness</li>
+							<li>Boxing</li>
+						</ul>
+						<a href="contact.html"><button>Buy Now</button></a>
+					</div>
+
+					<div class="price">
+						<div class="price_header fullyear">
+							<h1>Year</h1>
+							<h2>$70</h2>
+							<span>Per month</span>
+						</div>
+						<ul class="price_content">
+							<li>3 Days of the week</li>
+							<li>Personal Trainer</li>
+							<li>Body building</li>
+							<li>Cross Fit</li>
+							<li>Fitness</li>
+							<li>Boxing</li>
+						</ul>
+						<a href="contact.html"><button>Buy Now</button></a>
+					</div>
+				</div>
+			</div>
+
+		
+		</section>
+{% endblock %}

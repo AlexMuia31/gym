@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+		<section class="content">
+			<div class="page_header">
+				<h1>Blog</h1>
+			</div>
+			<div class="center">
+				
+				<div class="blog">
+					
+					<article class="single_post">
+						{% for object in object_list %}
+						<a href="page.html"><img src="{{object.Picture}}"></a>
+						<a href="page.html"><h1>{{object.Title}}</h1></a>
+						<div class="post_data">
+							<span class="author"><i class="fas fa-user"></i>Admin</span>
+							<span class="comments"><i class="fas fa-comment"></i>12</span>
+						</div>
+						
+						<p>{{object.summary}}...read more</p>
+						{% empty %} 
+						<li>No objects yet.</li> 
+
+						<div class="post_date">27 August 2018</div>
+						{% endfor %}
+					</article>
+				
+
+
+				</div>
+			
+
+				<ul class="pagination">
+					<li><a href="#">Prev</a></li>
+					<li><a href="#">1</a></li>
+					<li class="pagination_active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">Next</a></li>
+				</ul>
+			</div>
+
+			<div class="brochure">
+				<div class="center">
+					<h1>Choose Your Exercise And Start Your Training With Us.</h1>
+					<a href="contact.html"><button>Book Now</button></a>
+				</div>
+			</div>
+		</section>
+
+		{% endblock %}

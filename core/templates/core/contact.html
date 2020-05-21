@@ -1,0 +1,47 @@
+{% extends 'index.html'%}
+{% block content %}
+		<section class="content">
+			<div class="page_header">
+				<h1>Contact Us</h1>
+			</div>
+			<div class="center">
+				<div class="page_contact">
+					
+					<div class="contact">
+						<form action="#">
+							<input type="text" name="name" placeholder="Name...">
+							<input type="email" name="email" placeholder="Email...">
+							<textarea name="message" placeholder="Message"></textarea>
+							<input type="submit" value="SEND">
+						</form>
+						<div class="success_message">Message sent successfully!</div>
+						<div class="error_message">Failed sending message!</div>
+					</div>
+					<aside class="page_sidebar">
+						<section class="sidebar_opening_hours">
+							<h1>Opening Hours</h1>
+							<ul>
+								<li><h3>Monday</h3><span>08:00 AM - 18:00 PM</span></li>
+								<li><h3>Tuesday</h3><span>08:00 AM - 18:00 PM</span></li>
+								<li><h3>Wednesday</h3><span>08:00 AM - 18:00 PM</span></li>
+								<li><h3>Thursday</h3><span>08:00 AM - 18:00 PM</span></li>
+								<li><h3>Friday</h3><span>08:00 AM - 18:00 PM</span></li>
+								<li><h3>Saturday</h3><span>08:00 AM - 18:00 PM</span></li>
+							</ul>
+						</section>
+					</aside>
+				</div>
+			</div>
+
+			<div class="googlemap">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10175.787624092312!2d-73.94900388634959!3d40.689835874075634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2s!4v1535484353154" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+
+			<div class="brochure">
+				<div class="center">
+					<h1>Choose Your Exercise And Start Your Training With Us.</h1>
+					<a href="{% url 'core:contact' %}"><button>Book Now</button></a>
+				</div>
+			</div>
+		</section>
+		{% endblock %}
