@@ -12,14 +12,14 @@
 					
 					<article class="single_post">
 						{% for object in object_list %}
-						<a href="page.html"><img src="{{object.Picture}}"></a>
-						<a href="page.html"><h1>{{object.Title}}</h1></a>
+						<a href="{% url 'detail' object.id %}"><img src="{{object.Picture.url}}"></a>
+						<a href="{% url 'detail' object.id %}"><h1>{{object.Title}}</h1></a>
 						<div class="post_data">
-							<span class="author"><i class="fas fa-user"></i>Admin</span>
+							<span class="author"><i class="fas fa-user"></i>{{object.author}}</span>
 							<span class="comments"><i class="fas fa-comment"></i>12</span>
 						</div>
 						
-						<p>{{object.summary}}...read more</p>
+						<p>{{object.summary}}...<a href="{% url 'detail' object.id %}"  style="color:blue"</a>read more</p>
 						{% empty %} 
 						<li>No objects yet.</li> 
 

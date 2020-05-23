@@ -6,6 +6,7 @@ class Blog(models.Model):
     Body= models.TextField()
     Picture= models.ImageField(upload_to='images/', null=True, blank=True)
     pub_date=models.DateTimeField()
+    author=models.CharField(max_length=100)
 
 
     def __str__(self):

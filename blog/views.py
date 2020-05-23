@@ -7,5 +7,7 @@ class BlogView(ListView):
     model= Blog
     template_name='blog/blog.html'
 
-    
+class BlogDetail(DetailView):
+    model= Blog
+    template_name='blog/blog_detail.html'  
 

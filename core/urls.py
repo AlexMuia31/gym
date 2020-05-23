@@ -3,6 +3,7 @@ from django.conf.urls import url
 from .views import AboutView, ContactUs
 from .models import User
 
+
 app_name='core'
 
 urlpatterns=[

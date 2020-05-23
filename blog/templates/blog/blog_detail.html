@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% block content %}
+
+		<section class="content">
+			<div class="page_header">
+				<h1>{{object.Title}}</h1>
+			</div>
+			<div class="center">
+				<div class=" single editor_text">
+			
+
+					<img src="{{object.Picture.url}}">
+					<div class="post_data">
+						<span class="author"><i class="fas fa-user"></i>by {{object.author}}</span>
+						<span class="comments"><i class="fas fa-comment"></i>12</span>
+					</div>
+
+					<p>{{object.Body}}</p>
+
+					
+
+				</div>
+			</div>
+
+			<div class="brochure">
+				<div class="center">
+					<h1>Choose Your Exercise And Start Your Training With Us.</h1>
+					<a href="{% url 'core:contact' %}"><button>Book Now</button></a>
+				</div>
+			</div>
+        </section>
+        {% endblock %}
+
+		
+
