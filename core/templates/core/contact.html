@@ -14,6 +14,7 @@
 				<div class="page_contact">
 					
 					<div class="contact">
+						<p style="text-align:center">Kindly fill the form below 😊</p>
 						<form method="POST">
 							{% csrf_token %}
 							{{form | crispy}}
@@ -42,16 +43,10 @@
 					</aside>
 				</div>
 			</div>
-
 			<div class="googlemap">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10175.787624092312!2d-73.94900388634959!3d40.689835874075634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2s!4v1535484353154" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 
-			<div class="brochure">
-				<div class="center">
-					<h1>Choose Your Exercise And Start Your Training With Us.</h1>
-					<a href="{% url 'core:contact' %}"><button>Book Now</button></a>
-				</div>
-			</div>
+			
 		</section>
 		{% endblock %}

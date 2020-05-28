@@ -16,12 +16,13 @@
 						<a href="{% url 'detail' object.id %}"><h1>{{object.Title}}</h1></a>
 						<div class="post_data">
 							<span class="author"><i class="fas fa-user"></i>{{object.author}}</span>
+							<span class="author">{{object.pub_date}}</span>
 							<span class="comments"><i class="fas fa-comment"></i>12</span>
 						</div>
 						
 						<p>{{object.summary}}...<a href="{% url 'detail' object.id %}"  style="color:blue"</a>read more</p>
 						{% empty %} 
-						<li>No objects yet.</li> 
+						<li>Sorry,no Posts yet.</li> 
 
 						<div class="post_date">27 August 2018</div>
 						{% endfor %}

@@ -37,7 +37,7 @@
 						<li><a href="{% url 'core:about' %}">About Us</a></li>
 						<li><a href="/blog">Blog</a></li>
 						
-						<li><a href="{% url 'core:contact' %}">Contact</a></li>
+						
 						
 					</ul>
 				</nav>
@@ -61,7 +61,11 @@
 						<li><i class="fas fa-mobile"></i>+440-123-456-7890</li>
 					</ul>
 				</div>
-
+				<div>
+					
+					<a href="{% url 'core:contact' %}"><button style="background-color: blue;">Contact Us</button></a>
+				</div>
+				
 				<div class="footer_section newsletter">
 					
 					<ul>
@@ -76,18 +80,12 @@
 				<div class="footer_section latest_posts">
 					<h1>Latest Posts</h1>
 					<ul>
+						{% for object in object_list %}
 						<li>
-							<a href="page.html"><img src="img/img1.jpg"></a>
-							<a href="page.html"><h3>Lorem ipsum dolor sit amet, ei ubique fastidii vim</h3></a>
+							<a href="{% url 'detail' object.id %}"><h1>{{object.Title}}</h1></a>
+							<a href="{% url 'detail' object.id %}"><h3>{{object.summary}}...</h3></a>
 						</li>
-						<li>
-							<a href="#"><img src="img/img2.jpg"></a>
-							<a href="page.html"><h3>Elitr feugait complectitur eu pro, sea audire</h3></a>
-						</li>
-						<li>
-							<a href="#"><img src="img/img3.jpg"></a>
-							<a href="page.html"><h3>Lorem ipsum dolor sit amet, ei ubique fastidii vim</h3></a>
-						</li>
+						{% endfor %}
 					</ul>
 				</div>
 
